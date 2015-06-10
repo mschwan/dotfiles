@@ -20,11 +20,13 @@ set shiftwidth=4
 
 " ========== Colorscheme ==========
 syntax on
-set t_Co=16
 set background=dark
 colorscheme solarized
-let g:solarized_term=1
+let g:solarized_termcolors=256
 
 " ========== Statusline ==========
 set laststatus=2
-let g:airline_powerline_fonts=1
+set noshowmode
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='base16' " workaround for solarized theme
