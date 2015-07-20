@@ -8,6 +8,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'tkztmk/vim-vala'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,12 +23,14 @@ set shiftwidth=4
 " ========== Colorscheme ==========
 syntax on
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+set t_Co=256
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-ocean
+"let g:solarized_termcolors=256
 
 " ========== Statusline ==========
 set laststatus=2
 set noshowmode
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='base16' " workaround for solarized theme
+"let g:airline_theme='solarized' " workaround for solarized theme
