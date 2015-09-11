@@ -11,7 +11,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp fonts.conf ~/.config/fontconfig/fonts.conf
 ```
 
-## Install Base16 Shell Theme
+## Install [Base16 Shell Theme](https://github.com/chriskempson/base16-shell)
 ```
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
