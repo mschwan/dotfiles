@@ -6,15 +6,27 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+" Airline
 Plugin 'bling/vim-airline'
-Plugin 'tkztmk/vim-vala'
+" Colorscheme
 Plugin 'chriskempson/base16-vim'
+" Surround with Tags
+Plugin 'tpope/vim-surround'
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+" Various language additions
+Plugin 'tkztmk/vim-vala'
+Plugin 'tpope/vim-haml'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " ========== Line numbers and Indention ==========
 set number
+set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
