@@ -43,3 +43,14 @@ set laststatus=2
 set noshowmode
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" ignore arrow keys
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
