@@ -9,7 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Airline
 Plugin 'bling/vim-airline'
 " Colorscheme
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
+Plugin 'morhetz/gruvbox'
 " Surround with Tags
 Plugin 'tpope/vim-surround'
 " Snippets
@@ -31,12 +32,22 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" ========== Text wrapping ==========
+set wrap
+set linebreak
+set nolist
+set textwidth=79
+set colorcolumn=80
+
 " ========== Colorscheme ==========
 syntax on
 set background=dark
 set t_Co=256
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-ocean
+"let base16colorspace=256  " Access colors present in 256 colorspace
+"colorscheme base16-ocean
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='soft'
+colorscheme gruvbox
 
 " ========== Statusline ==========
 set laststatus=2
