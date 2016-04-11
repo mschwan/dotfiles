@@ -17,10 +17,12 @@ Plugin 'tpope/vim-surround'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
+Plugin 'mschwan/vim-snippets'
 " Various language additions
 Plugin 'tkztmk/vim-vala'
 Plugin 'tpope/vim-haml'
+Plugin 'tikhomirov/vim-glsl'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,6 +47,7 @@ set background=dark
 set t_Co=256
 "let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme base16-ocean
+let g:airline_powerline_fonts = 1
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
@@ -52,8 +55,8 @@ colorscheme gruvbox
 " ========== Statusline ==========
 set laststatus=2
 set noshowmode
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 
