@@ -1,6 +1,6 @@
 " --- Vundle ---
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -24,8 +24,8 @@ Plugin 'tkztmk/vim-vala'
 Plugin 'tpope/vim-haml'
 Plugin 'tikhomirov/vim-glsl'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
 " --- Line numbers and Indention ---
 set number
@@ -45,9 +45,9 @@ set colorcolumn=80
 syntax on
 set background=dark
 set t_Co=256
-"let g:gruvbox_italic=1
-"let g:gruvbox_contrast_dark='soft'
-colorscheme solarized
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='soft'
+colorscheme gruvbox
 
 " --- Statusline ---
 set laststatus=2
@@ -68,11 +68,3 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
-
-" --- Syntastic ---
-let g:syntastic_error_symbol="✘"
-let g:syntastic_warning_symbol="▲"
-augroup mySyntastic
-    au!
-    au FileType tex let b:syntastic_mode="passive"
-augroup END
