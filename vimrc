@@ -12,17 +12,18 @@ Plugin 'vim-airline/vim-airline-themes'
 " Colorschemes
 Plugin 'morhetz/gruvbox'
 Plugin 'altercation/vim-colors-solarized'
-" Surround with Tags
-Plugin 'tpope/vim-surround'
 " Snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'mschwan/vim-snippets'
-" Various language additions
+" Languages
 Plugin 'tkztmk/vim-vala'
 Plugin 'tpope/vim-haml'
 Plugin 'tikhomirov/vim-glsl'
+" Others
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,7 +65,7 @@ nnoremap <right> <nop>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
