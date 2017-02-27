@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]\[\033[01;36m\]$(__git_ps1)\[\033[00m\] » '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\[\033[01;36m\]$(__git_ps1)\[\033[00m\]$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h \W » '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -75,7 +75,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls -Fh --color=auto --group-directories-first'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -87,11 +87,12 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
+# some more aliases and functions
 alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -Al'
 alias upgrade='sudo apt update && sudo apt upgrade -V'
+alias dist-upgrade='sudo apt update && sudo apt dist-upgrade -V'
+function cdir { mkdir -p $1 && cd $1; }
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
